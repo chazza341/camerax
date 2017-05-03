@@ -1,4 +1,13 @@
-
+//when the jQuery Mobile page is initialised
+$(document).on('pageinit', function() {
+	
+	//set up listener for button click
+	$(document).on('click', getPosition);
+	
+	//change time box to show message
+	$('#time').val("Press the button to get location data");
+	
+});
 var destinationType; //used sets what should be returned (image date OR file path to image for example)
 
 document.addEventListener("deviceready",onDeviceReady,false);
